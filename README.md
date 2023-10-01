@@ -8,7 +8,7 @@ This extension is built on new python tensorRT, no need to build complex system 
 ## Before install
 First you need to modify original file in webui, which power your webui to change the Unet of SDXL.
 
-Let's start from your_webui_path/modules/sd_hijack.py, and you may find these python scripts in line `242`
+Let's start from `your_webui_path/modules/sd_hijack.py`, and you may find these python scripts in line `242`
 ````
 if not hasattr(ldm.modules.diffusionmodules.openaimodel, 'copy_of_UNetModel_forward_for_webui'):
     ldm.modules.diffusionmodules.openaimodel.copy_of_UNetModel_forward_for_webui = ldm.modules.diffusionmodules.openaimodel.UNetModel.forward
