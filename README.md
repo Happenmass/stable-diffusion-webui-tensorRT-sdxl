@@ -37,14 +37,22 @@ copy stable-diffusion-webui-tensorr-sdxl stable-diffusion-webui/extensions/
 
 You need to choose the same version of CUDA as python's torch library is using. For torch 2.0.1 it is CUDA 11.8.
 
-then you need to install requirments of the extension manually:
+then you need to install requirments of the extension manually(Linux):
 ````
 cd stable-diffusion-webui
 . venv/bin/activate
 cd extensions/stable-diffusion-webui-tensorr-sdxl
 pip install -r requirements.txt
 ````
+### Windows
+Create a new environment variables named `INCLUDE` and add your nvtx path like `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include`
 
+Right click mouse and open terminal under your stable diffusion webui path
+````
+.\venv\Scripts\activate
+cd extensions/stable-diffusion-webui-tensorr-sdxl
+pip install -r requirements.txt
+````
 Now the installing progress of the extension has finished
 
 ## How to use
